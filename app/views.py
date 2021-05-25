@@ -89,7 +89,8 @@ def register_view(request):
             register_permission = False
             messages.error(request, 'Username already exists.')
         if register_permission:
-            user = User.objects.create(username=username, email=email, password=password)
+            user = User.objects.create_user(
+                username=username, email=email, password=password)
             Account.objects.create(phone=int(phone), doctor=bool(doctor), user=user)
             login(request, user)
             return redirect('slogin')
