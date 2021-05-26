@@ -32,8 +32,11 @@
 
     <!-- Hero -->
     <section class="hero hero-md">
-        <div class="hero__wrapper d-flex align-items-center" style="background-image:  linear-gradient(rgba(86, 101, 124, 0.8), rgba(86, 101, 124, 0.8)), url('static/img/hero/hero-md-nx9LpzQBf9Q.jpg')">
+        <div class="hero__wrapper d-flex align-items-center" 
+        style="background-image:  linear-gradient(rgba(86, 101, 124, 0.8),
+         rgba(86, 101, 124, 0.8)), url('{% static 'app/img/hero/hero-md-nx9LpzQBf9Q.jpg' %}')">
             <div class="container">
+                url('{% static 'logo.png' %}')
                 <div class="hero__text">
                     <h1>Protect Yourself</h1>
                 </div>
@@ -48,7 +51,10 @@
                 <div class="col-12 col-md-6" data-aos="fade-right" data-aos-delay="800" data-aos-duration="1200">
                     <span class="subtitle">How to Protect yourself and others_</span>
                     <h2 class="title-line text-left">Precautionary measures</h2>
-                    <p class="text-left mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo.</p>
+                    <p class="text-left mb-4">
+                        Masks can help prevent the spread of the virus from the person wearing the mask to others. Masks alone do not protect
+                        against COVID-19, and should be combined with physical distancing and hand hygiene. Follow the advice provided by your
+                        local health authority.</p>
                     <h4>Top 3 measures</h4>
                     <!-- Bullet-list -->
                     <div class="bullet-list">
@@ -99,10 +105,21 @@
                     <h4 class="mb-3 mt-3">Other important information</h4>
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <p class="text-left mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo.</p>
+                            <p class="text-left mb-5">
+                                Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+                                Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without
+                                requiring special treatment. Older people, and those with underlying medical problems like cardiovascular disease,
+                                diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.</p>
                         </div>
                         <div class="col-12 col-md-6">
-                            <p class="text-left mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo.</p>
+                            <p class="text-left mb-5">
+                                The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus, the disease it
+                                causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based
+                                rub frequently and not touching your face.    
+                                The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person
+                                coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a
+                                flexed elbow).
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -111,7 +128,17 @@
                 <div class="col-12 col-md-6" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1200">
                     <span class="subtitle">How to Protect yourself and others_</span>
                     <h2 class="title-line text-left">Precautionary measures</h2>
-                    <p class="text-left mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo. Fusce gravida mauris justo. Morbi in posuere risus. Suspendisse blandit sapien in convallis dignissim.</p>
+                    <p class="text-left mb-4">
+                        Wash your hands often with soap and water for at least 20 seconds. Use an alcohol-based hand sanitizer that contains at
+                        least 60% alcohol if soap and water are not available.
+                        Avoid touching your eyes, nose, and mouth with unwashed hands.
+                        Avoid close contact with people who are sick.
+                        Cover your cough or sneeze with a tissue, then throw the tissue in the trash.
+                        Clean and disinfect frequently touched objects and surfaces.
+                        Maintain at least 1 meter (3 feet) distance between yourself and other people, particularly those who are coughing,
+                        sneezing and have a fever.
+                        Wear cloth face coverings in public settings where other social distancing measures are difficult to maintain.
+                    </p>
                 </div>
                 <div class="col-12 col-md-6 mb-5" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1200">
                     <!-- Video -->
@@ -146,7 +173,7 @@
     </section>
     <!-- /Content -->
 
-    <!-- Measures -->
+    <!-- Measures
     <section class="measures pt-5 pb-5 pb-md-10 pt-md-10 bg-f bg-f--secondary" id="measures">
         <div class="container">
             <div class="row justify-content-md-center d-flex">
@@ -290,8 +317,8 @@
 
         </div>
     </section>
-    <!-- /Measures -->
-    <!-- FAQ -->
+    Measures -->
+    <!-- FAQ
     <section class="faq bg-f bg-f--secondary pt-5 pb-5 pb-md-10 pt-md-10">
         <div class="container">
             <div class="row justify-content-md-center d-flex">
@@ -521,7 +548,7 @@
             </div>
         </div>
     </section>
-    <!-- /FAQ -->
+    /FAQ -->
     <!-- Call To Action -->
     <section class="cta" id="cta">
         <div data-jarallax data-speed="0.2" class="jarallax">

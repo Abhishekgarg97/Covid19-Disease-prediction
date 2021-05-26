@@ -63,7 +63,7 @@
                             <div class="owl-bulletbar owl-theme owl-carousel">
                                 <div class="bullet">
                                     <div class="bullet__icon">
-                                        <img src="static/img/icons/virus.svg" alt="Outbreak" />
+                                <img src="{% static 'app/img/icons/virus.svg' %}" alt="Outbreak" />
                                     </div>
                                     <div class="bullet__text">
                                         <h5>Outbreak</h5>
@@ -71,8 +71,8 @@
                                     </div>
                                 </div>
                                 <div class="bullet">
-                                    <div class="bullet__icon">
-                                        <img src="static/img/icons/temperature.svg" alt="Symptoms" />
+                                    <div class="bullet__icon">                                        
+                                        <img src="{% static 'app/img/icons/temperature.svg' %}" alt="Symptoms" />
                                     </div>
                                     <div class="bullet__text">
                                         <h5>Symptoms</h5>
@@ -81,7 +81,7 @@
                                 </div>
                                 <div class="bullet">
                                     <div class="bullet__icon">
-                                        <img src="static/img/icons/vulnerable.svg" alt="Vulnerable" />
+                                        <img src="{% static 'app/img/icons/vulnerable.svg' %}" alt="Vulnerable" />
                                     </div>
                                     <div class="bullet__text">
                                         <h5>Vulnerable</h5>
@@ -131,7 +131,8 @@
                 <div class="col-12 col-md-6" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1500">
                     <span class="subtitle">How to Protect yourself and others_</span>
                     <h2 class="title-line text-left">Precautionary measures</h2>
-                    <p class="text-left mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo. Fusce gravida mauris justo. Morbi in posuere risus. Suspendisse blandit sapien in convallis dignissim.</p>
+                    <p class="text-left mb-4">Stay safe by taking some simple precautions,such as physical distancing, wearing a mask, keeping rooms well ventilated, avoiding crowds, cleaning your hands, and coughing into a bent elbow or
+                    tissue. Check local advice where you live and work</p>
                     <h4>How does the Praise spread?</h4>
                     <!-- Bullet-list -->
                     <div class="bullet-list">
@@ -170,7 +171,7 @@
                 <div class="col-12 col-md-6" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500">
                     <span class="subtitle">The latest statistics_</span>
                     <h2 class="title-line">COVID-19 statistics</h2>
-                    <p class="text-left mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo.</p>
+                    <p class="text-left mb-5"></p>
                     <!-- Statistics -->
                     <div class="statistics">
                         <div class="bars-total">
@@ -178,29 +179,29 @@
                                 <h6>Total confirmed</h6>
                             </div>
                             <div class="bars-total__number">
-                                169.389
+                                168,013,090
                             </div>
 
                         </div>
                         <div class="bar mb-5">
                             <span class="bar-label">Deaths</span>
-                            <span class="bar-progress">20.290</span>
+                            <span class="bar-progress">3,488,234</span>
                             <div class="progress">
                                 <div class="progress-bar progress-bar--deaths" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <div class="bar mb-5">
                             <span class="bar-label">Recovered</span>
-                            <span class="bar-progress">22.324</span>
+                            <span class="bar-progress">149,356,261</span>
                             <div class="progress">
-                                <div class="progress-bar progress-bar--recovered" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar progress-bar--recovered" role="progressbar" style="width: 60%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <div class="bar mb-5">
                             <span class="bar-label">Active</span>
-                            <span class="bar-progress">122.324</span>
+                            <span class="bar-progress">15,168,595</span>
                             <div class="progress">
-                                <div class="progress-bar progress-bar--active" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar progress-bar--active" role="progressbar" style="width: 30%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -225,7 +226,7 @@
                 <div class="col-12 col-md-6 mb-5">
                     <span class="subtitle justify-content-center d-flex">How to Protect yourself and others_</span>
                     <h2 class="title-line justify-content-center d-flex">Precautionary measures</h2>
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
+                    <!-- <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p> -->
                 </div>
             </div>
             <div class="row">
@@ -245,7 +246,8 @@
                                                     Clean your hands regularly
                                                 </h6>
                                                 <p class="measure__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                    Before touching your faces
+                                                    After leaving a public place
                                                 </p>
                                             </div>
                                         </div>
@@ -258,7 +260,7 @@
                                                     Use paper tissues
                                                 </h6>
                                                 <p class="measure__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                    Always cover your mouth and nose with a tissue when you cough or sneeze.
                                                 </p>
                                             </div>
                                         </div>
@@ -273,7 +275,9 @@
                                                     Sneeze Into Your Elbow
                                                 </h6>
                                                 <p class="measure__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                    If you are not wearing a mask:
+                                                      use the inside of your elbow and do not
+                                                    spit.
                                                 </p>
                                             </div>
                                         </div>
@@ -286,7 +290,7 @@
                                                     Work from home if possible
                                                 </h6>
                                                 <p class="measure__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                    Ergonomically unfriendly work areas.
                                                 </p>
                                             </div>
                                         </div>
@@ -306,7 +310,7 @@
                                                     Shake hands
                                                 </h6>
                                                 <p class="measure__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                    Respiratory viruses can be passed by shaking hands and touching your eyes, nose and/or mouth.
                                                 </p>
                                             </div>
                                         </div>
@@ -319,7 +323,7 @@
                                                     Crowded area’s
                                                 </h6>
                                                 <p class="measure__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                    Limit social gatherings and time spent in crowded places.
                                                 </p>
                                             </div>
                                         </div>
@@ -334,7 +338,7 @@
                                                     Go outdoor with a cold
                                                 </h6>
                                                 <p class="measure__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                    Close contact with other people increases risk.
                                                 </p>
                                             </div>
                                         </div>
@@ -347,7 +351,7 @@
                                                     Keep your distance
                                                 </h6>
                                                 <p class="measure__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                    Look for physical barriers, like plexiglass screens or modified layouts, that help you keep your distance from others.
                                                 </p>
                                             </div>
                                         </div>
@@ -363,7 +367,7 @@
         </div>
     </section>
     <!-- /Measures -->
-    <!-- Team -->
+    <!-- Team 
     <section class="team pt-5 pb-5 pb-md-10 pt-md-10" id="team">
         <div class="container">
             <div class="row justify-content-md-center d-flex">
@@ -437,7 +441,9 @@
                 <div class="col-12 col-md-6 mb-5">
                     <span class="subtitle justify-content-center d-flex">FAQ of the CoronaPraise _</span>
                     <h2 class="title-line justify-content-center d-flex">Frequently Asked Questions</h2>
-                    <p class="text-center">Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit.</p>
+                    <p class="text-center">
+                        <!-- Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit. -->
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -473,7 +479,12 @@
                                     </div>
                                     <div class="collapse show" id="accordion-tab-1-content-1" aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
                                         <div class="card-body">
-                                            <p>Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit. Aenean eu neque erat. Pellentesque aliquet leo nec dui hendrerit venenatis. Morbi ut leo aliquet eros rhoncus pulvinar dignissim ut risus.</p>
+                                            <p>
+                                                COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and
+                                                recover without hospitalization.
+                                                Most common symptoms:fever,dry cough,tiredness
+                                                Serious symptoms:difficulty breathing or shortness of breath,chest pain or pressure,loss of speech or movement
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -485,7 +496,17 @@
                                     </div>
                                     <div class="collapse" id="accordion-tab-1-content-2" aria-labelledby="accordion-tab-1-heading-2" data-parent="#accordion-tab-1">
                                         <div class="card-body">
-                                            <p>Sed sagittis interdum ornare. Sed at magna leo. Quisque ultricies massa non risus aliquet, nec pellentesque ligula iaculis. Duis et enim porttitor, fermentum enim id, vestibulum eros. Suspendisse potenti. Suspendisse convallis odio eget velit imperdiet luctus. Suspendisse bibendum pharetra lacus, non dapibus augue interdum nec. Integer pretium metus nec leo imperdiet aliquet. Curabitur nibh est, vulputate eget congue sit amet, maximus sed mi. Curabitur tincidunt augue quis consectetur sollicitudin. Vestibulum in arcu vehicula, eleifend dolor eu, fringilla orci. Mauris sollicitudin blandit ligula sed congue. Vivamus ut diam aliquet dui tempus consequat non eu eros.</p>
+                                            <p>
+                                                There are different types of coronavirus tests that can be done:                                             
+                                                Swab Test – In this case, a special swab is used to take a sample from your nose or throat,
+                                                Nasal aspirate – In this case, a saline solution will be injected into your nose and, then a sample is taken with a
+                                                light suction,
+                                                Tracheal aspirate – In this case, a thin tube with a torch, also known as a bronchoscope, is put into your mouth to
+                                                reach your lungs from where a sample is collected,
+                                                Sputum Test – Sputum is thick mucus that gets accumulated in the lungs and comes out with a cough. During this test
+                                                you’re required to cough up sputum in a special cup or a swab is used to take a sample from your nose,
+                                                Blood test – In this case, a blood sample is taken from a vein in the arm.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -497,7 +518,17 @@
                                     </div>
                                     <div class="collapse" id="accordion-tab-1-content-3" aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
                                         <div class="card-body">
-                                            <p>Mauris scelerisque ipsum mauris, in tempor metus commodo eu. In magna enim, sodales rhoncus finibus non, sodales a elit.</p>
+                                            <p>
+                                                Wash your hands often with soap and water for at least 20 seconds. Use an alcohol-based hand sanitizer that contains at
+                                                least 60% alcohol if soap and water are not available.
+                                                • Avoid touching your eyes, nose, and mouth with unwashed hands.
+                                                • Avoid close contact with people who are sick.
+                                                • Cover your cough or sneeze with a tissue, then throw the tissue in the trash.
+                                                • Clean and disinfect frequently touched objects and surfaces.
+                                                • Maintain at least 1 meter (3 feet) distance between yourself and other people, particularly those who are coughing,
+                                                sneezing and have a fever.
+                                                • Stay home and self-isolate even with minor symptoms such as cough, headache, mild fever, until you recover.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -509,7 +540,9 @@
                                     </div>
                                     <div class="collapse" id="accordion-tab-1-content-4" aria-labelledby="accordion-tab-1-heading-4" data-parent="#accordion-tab-1">
                                         <div class="card-body">
-                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            <p>
+                                                If you are having RT-PCR (negative) report u can travel in india.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -521,40 +554,53 @@
                                 <div class="card">
                                     <div class="card-header" id="accordion-tab-2-heading-1">
                                         <h5>
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-1" aria-expanded="false" aria-controls="accordion-tab-2-content-1"> Nunc malesuada ultrices eros vitae tristique?</button>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-1" aria-expanded="false" aria-controls="accordion-tab-2-content-1">Common Symptoms: </button>
                                         </h5>
                                     </div>
                                     <div class="collapse show" id="accordion-tab-2-content-1" aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
                                         <div class="card-body">
-                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            <p>Fever or chills
+                                            Cough
+                                            Shortness of breath or difficulty breathing
+                                            Fatigue
+                                            Muscle or body aches
+                                            Headache</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-header" id="accordion-tab-2-heading-2">
                                         <h5>
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-2" aria-expanded="false" aria-controls="accordion-tab-2-content-2">Quisque convallis nibh id dui iaculis volutpat?</button>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-2" aria-expanded="false" aria-controls="accordion-tab-2-content-2">Serious symptoms:</button>
                                         </h5>
                                     </div>
                                     <div class="collapse" id="accordion-tab-2-content-2" aria-labelledby="accordion-tab-2-heading-2" data-parent="#accordion-tab-2">
                                         <div class="card-body">
-                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            <p>Trouble breathing
+                                            Persistent pain or pressure in the chest
+                                            New confusion
+                                            Inability to wake or stay awake
+                                            Pale, gray, or blue-colored skin, lips, or nail beds, depending on skin tone</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-header" id="accordion-tab-2-heading-3">
                                         <h5>
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-3" aria-expanded="false" aria-controls="accordion-tab-2-content-3">Integer in viverra elit?</button>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-3" aria-expanded="false" aria-controls="accordion-tab-2-content-3">Less common symptoms:</button>
                                         </h5>
                                     </div>
                                     <div class="collapse" id="accordion-tab-2-content-3" aria-labelledby="accordion-tab-2-heading-3" data-parent="#accordion-tab-2">
                                         <div class="card-body">
-                                            <p>Cras bibendum urna leo, nec ultricies nunc pharetra eget. Sed maximus fermentum mattis</p>
+                                            <p>New loss of taste or smell
+                                            Sore throat
+                                            Congestion or runny nose
+                                            Nausea or vomiting
+                                            Diarrhea</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <!-- <div class="card">
                                     <div class="card-header" id="accordion-tab-2-heading-4">
                                         <h5>
                                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-4" aria-expanded="false" aria-controls="accordion-tab-2-content-4">Aenean eget gravida eros?</button>
@@ -565,7 +611,7 @@
                                             <p>Vivamus vehicula, velit et tincidunt imperdiet, ipsum felis rutrum est, non egestas erat mi hendrerit lacus. Vestibulum ac arcu est. Duis ac neque egestas, efficitur nunc sed, mollis magna. Aliquam ac scelerisque velit, id blandit odio.</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3">
@@ -574,28 +620,36 @@
                                 <div class="card">
                                     <div class="card-header" id="accordion-tab-3-heading-1">
                                         <h5>
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-1" aria-expanded="false" aria-controls="accordion-tab-3-content-1">Quisque convallis nibh id dui iaculis volutpat?</button>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-1" aria-expanded="false" aria-controls="accordion-tab-3-content-1">At-Home Coronavirus Treatment</button>
                                         </h5>
                                     </div>
                                     <div class="collapse show" id="accordion-tab-3-content-1" aria-labelledby="accordion-tab-3-heading-2" data-parent="#accordion-tab-3">
                                         <div class="card-body">
-                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            <p>Rest. It can make you feel better and may speed your recovery.
+                                            Stay home. Don't go to work, school, or public places.
+                                            Drink fluids. You lose more water when you're sick. Dehydration can make symptoms worse and cause other health problems.
+                                            Monitor. If your symptoms get worse, call your doctor right away. Don't go to their office without calling first. They
+                                            might tell you to stay home, or they may need to take extra steps to protect staff and other patients.
+                                            Ask your doctor about over-the-counter medicines that may help, like acetaminophen to lower your fever.
+                                        </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-header" id="accordion-tab-3-heading-2">
                                         <h5>
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-2" aria-expanded="false" aria-controls="accordion-tab-3-content-2">Integer in viverra elit?</button>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-2" aria-expanded="false" aria-controls="accordion-tab-3-content-2">hospitalized with COVID-19</button>
                                         </h5>
                                     </div>
                                     <div class="collapse" id="accordion-tab-3-content-2" aria-labelledby="accordion-tab-3-heading-2" data-parent="#accordion-tab-3">
                                         <div class="card-body">
-                                            <p>Cras bibendum urna leo, nec ultricies nunc pharetra eget. Sed maximus fermentum mattis</p>
+                                            <p>Dexamethasone,Remdesivir,
+                                                Baricitinib in combination with remdesivir,
+                                                Anticoagulation drugs ("blood thinners")</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <!-- <div class="card">
                                     <div class="card-header" id="accordion-tab-3-heading-3">
                                         <h5>
                                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-3" aria-expanded="false" aria-controls="accordion-tab-3-content-3">Aenean eget gravida eros?</button>
@@ -606,7 +660,7 @@
                                             <p>Vivamus vehicula, velit et tincidunt imperdiet, ipsum felis rutrum est, non egestas erat mi hendrerit lacus. Vestibulum ac arcu est. Duis ac neque egestas, efficitur nunc sed, mollis magna. Aliquam ac scelerisque velit, id blandit odio.</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4">
@@ -615,24 +669,28 @@
                                 <div class="card">
                                     <div class="card-header" id="accordion-tab-4-heading-1">
                                         <h5>
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-1" aria-expanded="false" aria-controls="accordion-tab-4-content-1"> Nunc malesuada ultrices eros vitae tristique?</button>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-1" aria-expanded="false" aria-controls="accordion-tab-4-content-1"> Stopping the spread starts with you</button>
                                         </h5>
                                     </div>
                                     <div class="collapse show" id="accordion-tab-4-content-1" aria-labelledby="accordion-tab-4-heading-1" data-parent="#accordion-tab-4">
                                         <div class="card-body">
-                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            <p>Wear a mask.
+                                                Clean your hands.
+                                                Maintain safe distance.
+                                                Get vaccinated.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-header" id="accordion-tab-4-heading-2">
                                         <h5>
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-2" aria-expanded="false" aria-controls="accordion-tab-4-content-2">Aenean eget gravida eros?</button>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-2" aria-expanded="false" aria-controls="accordion-tab-4-content-2">stay Away</button>
                                         </h5>
                                     </div>
                                     <div class="collapse" id="accordion-tab-4-content-2" aria-labelledby="accordion-tab-4-heading-2" data-parent="#accordion-tab-4">
                                         <div class="card-body">
-                                            <p>Vivamus vehicula, velit et tincidunt imperdiet, ipsum felis rutrum est, non egestas erat mi hendrerit lacus. Vestibulum ac arcu est. Duis ac neque egestas, efficitur nunc sed, mollis magna. Aliquam ac scelerisque velit, id blandit odio.</p>
+                                            <p> Stay 6 feet apart from others who don’t live with you.
+                                                Avoid crowds and poorly ventilated indoor spaces.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -644,12 +702,15 @@
                                 <div class="card">
                                     <div class="card-header" id="accordion-tab-5-heading-1">
                                         <h5>
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-5-content-1" aria-expanded="false" aria-controls="accordion-tab-5-content-1"> Nunc malesuada ultrices eros vitae tristique?</button>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-5-content-1" aria-expanded="false" aria-controls="accordion-tab-5-content-1"> If you are having RT-PCR (negative) report u can travel in india.</button>
                                         </h5>
                                     </div>
                                     <div class="collapse show" id="accordion-tab-5-content-1" aria-labelledby="accordion-tab-5-heading-1" data-parent="#accordion-tab-5">
                                         <div class="card-body">
-                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                           <p>The travel status of individual countries can change suddenly and we know it can be hard to stay on top of it all.
+                                        That's why we're getting you the information you need to consider when planning travel.Just enter your departure country
+                                        below - the map will update to reflect countries' opening status and any entry requirements for air travellers. Before
+                                        you book, be sure to double check your country's official government site.</p>
                                         </div>
                                     </div>
                                 </div>

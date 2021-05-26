@@ -114,7 +114,7 @@ def slogin(request):
     
         df = pd.read_csv(r"app/static/app/datasets/Covid-19.csv")
         
-        x_train = df[['Dry Cough', 'High Fever','Sore Throat', 'Difficulty in breathing']]
+        X_train = df[['Dry Cough', 'High Fever','Sore Throat', 'Difficulty in breathing']]
         Y_train = df[['Infected with Covid19']]
         tree = DecisionTreeClassifier(max_leaf_nodes=6, random_state=0)
         tree.fit(X_train, Y_train)
