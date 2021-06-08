@@ -66,9 +66,10 @@ input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(209, 19, 19);
   box-sizing: border-box;
 }
+
 
 
 h1{
@@ -98,12 +99,6 @@ button:hover {
   background-color: #f44336;
 }
 
-
-img.avatar {
-  width: 50%;
-  border-radius: 10%;
-}
-
 .container {
   padding: 16px;
 }
@@ -111,6 +106,7 @@ img.avatar {
 span.psw {
   float: right;
   padding-top: 16px;
+  color: #f44336;
 }
 
  </style>
@@ -206,10 +202,9 @@ span.psw {
                             </div>
                         </div>
        
-       <form action="" method="POST" class="form">
-           <img src="{% static 'app/img/form/avatar.png' %}" alt="image">
-      
-{% csrf_token %}
+                        <form class="form-group password-box bg-light mx-auto" method="post">
+                            <img src="{% static 'app/img/form/avatar.png' %}" alt="image">
+                    {% csrf_token %}
 
 <div class="p">
     {% if messages %}
@@ -225,27 +220,37 @@ span.psw {
             {% endif %}
         {% endfor %}
     {% endif %}
-                
-    <label><b>Username</b></label>
-    <input type="text" placeholder="username" name="username" required>
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="password" name="password" required>
-        
-    <button type="submit" id="myDIV">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-    
-    <button type="button" class="cancelbtn"><a href="{% url 'home'%}">Cancel</a></button>
-    <span class="psw">Forgot <a href="{% url 'password'%}">password?</a></span>
-  
- </div>
-</form>
-</div>      
+                        <table class="table table-borderless">
+                                <tr>
+                                    <td>
+                                        <label for="name">Email<span style="color:#f44336;">*</span></label>
+                                    </td>
+                                    <td>
+                                        <input type="email" 
+                                        name="email" placeholder="Email" required="required" class="input-field"
+                                         >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="name">New Password<span style="color:#f44336;">*</span></label>
+                                    </td>
+                                    <td>
+                                        <input type="password" name="password1" 
+                                        placeholder="New Password" required="required" class="input-field">
+                                    </td>
+                                </tr>
+                                <button type="button" class="cancelbtn"><a onclick="history.back()">Cancel</a></button>
+                        <span class="psw">SignIn <a href="{% url 'login'%}">Account?</a></span>
+                                </table>
+                                <button type="submit" id="myDIV">Reset Password</button>
+                    </div>
+                    </form>
+                    </div>      
         </section>
-        <!--trying vodes-->
-        
+        <!--trying codes-->
+		
   <!--end trial-->
         <!-- /Donation -->
     </main>
@@ -254,7 +259,7 @@ span.psw {
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-12 col-md-3 text-left">
-                    <p>© 2020 Copyright Slashdown</p>
+                    <p>© 2021Copyright Praise/p>
                 </div>
                 <div class="col-12 col-md-9 text-md-right">
                     <ul>

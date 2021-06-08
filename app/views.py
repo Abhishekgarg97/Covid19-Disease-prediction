@@ -3,17 +3,39 @@ from django.contrib.auth.models import User
 from .models import Account, Covid
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-#machine learning 
+# machine learning
 import pandas as pd
 from .models import *
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 # Create your views here.
+
+
 def home(request):
     return render(request, 'app/index.html', {
         'title': 'Home',
     })
+
+
+def reset_password(request):
+    if request.method == "POST":
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        if User.objects.filter(email=email).exists():
+            user = User.objects.get(email=email)
+            user.set_password(password1)
+            user.save()
+            messages.success(request, 'Password Reset Successful')
+            return redirect('login')
+        else:
+            messages.error(request, 'Email does not exist')
+            return redirect(request, 'forgetpass')
+    else:
+        return render(request, 'app/forgetpass.html', {
+            'title': 'reset password',
+        })
+
 
 def login_view(request):
     if request.method == 'POST':
@@ -26,38 +48,44 @@ def login_view(request):
         else:
             messages.error(request, 'Check your username and password')
             return redirect('login')
-    return render(request,'app/login.html', {
+    return render(request, 'app/login.html', {
         'title': 'Login',
     })
+
 
 def archive_news(request):
     return render(request, 'app/archive-news.html', {
         'title': 'Archive news',
     })
 
+
 def contact(request):
     return render(request, 'app/contact.html', {
         'title': 'Contact',
     })
+
 
 def donation(request):
     return render(request, 'app/donation.html', {
         'title': 'Donation',
     })
 
+
 def faq(request):
     return render(request, 'app/faq.html', {
         'title': 'Faq',
     })
 
+
 def infected(request):
-    return render(request,'app/infected.html', {
+    return render(request, 'app/infected.html', {
         'title': 'Infected',
     })
 
+
 def predictions(request):
     covid = Covid.objects.get(user=request.user)
-    return render(request,'app/predictions.html', {
+    return render(request, 'app/predictions.html', {
         'title': 'Predictions',
         'dry': covid.dry,
         'fever': covid.fever,
@@ -65,10 +93,12 @@ def predictions(request):
         'difficulty': covid.difficulty,
     })
 
+
 def protection(request):
     return render(request, 'app/protection.html', {
         'title': 'Protection',
     })
+
 
 def register_view(request):
     if request.method == 'POST':
@@ -91,7 +121,8 @@ def register_view(request):
         if register_permission:
             user = User.objects.create_user(
                 username=username, email=email, password=password)
-            Account.objects.create(phone=int(phone), doctor=bool(doctor), user=user)
+            Account.objects.create(
+                phone=int(phone), doctor=bool(doctor), user=user)
             login(request, user)
             return redirect('slogin')
         else:
@@ -100,10 +131,12 @@ def register_view(request):
         'title': 'Register',
     })
 
+
 def single_news(request):
     return render(request, 'app/single-news.html', {
         'title': 'Single news',
     })
+
 
 def slogin(request):
     if request.method == 'POST':
@@ -111,29 +144,32 @@ def slogin(request):
         fever = int(request.POST['fever'])
         throat = int(request.POST['throat'])
         difficulty = int(request.POST['difficulty'])
-    
+
         df = pd.read_csv(r"app/static/app/datasets/Covid-19.csv")
-        
-        X_train = df[['Dry Cough', 'High Fever','Sore Throat', 'Difficulty in breathing']]
+
+        X_train = df[['Dry Cough', 'High Fever',
+                      'Sore Throat', 'Difficulty in breathing']]
         Y_train = df[['Infected with Covid19']]
         tree = DecisionTreeClassifier(max_leaf_nodes=6, random_state=0)
         tree.fit(X_train, Y_train)
         prediction = tree.predict([[dry, fever, throat, difficulty]])
-       
+
         return render(request, 'app/predictions.html',
                       {"data": prediction, "dry": dry, "fever": fever,
                        "throat": throat, "difficulty": difficulty, "prediction": prediction})
 
-        #predict=prediction.objects.all(dry=dry,fever=fever,throat=throat,difficulty=difficulty)
-        #predict.save();
+        # predict=prediction.objects.all(dry=dry,fever=fever,throat=throat,difficulty=difficulty)
+        # predict.save();
 
-        Covid.objects.create(dry=dry, fever=fever, throat=throat, difficulty=difficulty, user=request.user)
+        Covid.objects.create(dry=dry, fever=fever, throat=throat,
+                             difficulty=difficulty, user=request.user)
         return redirect('predictions')
 
     return render(request, 'app/slogin.html', {
         'title': 'Prediction',
-    
+
     })
+
 
 def logout_view(request):
     logout(request)

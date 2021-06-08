@@ -22,13 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-%cmx#_nc-fz&^l9(wq5^*&#tw&1@*lc05lwuxv7jwqf2+%s^u5'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: donw't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# Application definition
+    # Application definition
 
 INSTALLED_APPS = [
     'app.apps.AppConfig',
