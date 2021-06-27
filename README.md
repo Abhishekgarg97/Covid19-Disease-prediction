@@ -7,7 +7,7 @@
 5.views.py is used for making a lonk href with the urls
 6 db used is djangoadmin
 
-run package using** python manage.py runserver**
+run package using **python manage.py runserver**
 
 ### Details which are available 
 
